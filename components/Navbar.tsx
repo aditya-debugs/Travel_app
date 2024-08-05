@@ -37,18 +37,19 @@ const Navbar = () => {
           variant="btn_dark_green"
         />
       </div>
-      <div onClick={handleNav} className="block sm:hidden z-10">
+      <div onClick={handleNav} className="block sm:hidden z-10 ">
         {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
       </div>
 
       <div
         className={
           nav
-            ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300"
-            : " sm:hidden absolute top-0 left-[100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-white text-center ease-in duration-300"
+            ? 
+              "sm:hidden fixed top-0 right-0 w-1/2 h-full bg-white text-center py-20 ease-in-out duration-300  "
+            : "sm:hidden fixed top-0 right-[-100%] w-1/2 h-full bg-white text-center ease-in-out duration-300"
         }
       >
-        <ul className="text-4xl p-4 ">
+        <ul className="text-2xl p-1 ">
           {NAV_LINKS.map((link) => (
             <Link
               href={link.href}
